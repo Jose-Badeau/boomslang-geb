@@ -17,13 +17,13 @@
 	<description>
 		Delivers the STMPBot generator.
 	</description>
-
-	<dependencies>
-		<!-- These dependencies are not required to build the feature. However, they are used by the xtext-maven-plugin dependency config section to load all dependencies. -->
+<!-- These dependencies are not required to build the feature. However, they are used by the xtext-maven-plugin dependency config section to load all dependencies. -->
+<!-- 	<dependencies>
+		
 		<dependency>
 			<groupId>org.boomslang</groupId>
 			<artifactId>org.boomslang.feature</artifactId>
-			<version>${project.version}</version><!-- versions may differ -->
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -46,7 +46,7 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
-
+ -->
     <build>
         <plugins>
             <plugin>

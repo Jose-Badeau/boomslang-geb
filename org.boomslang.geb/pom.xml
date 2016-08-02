@@ -86,11 +86,5 @@
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-support</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>ch.esgroup</groupId>
-			<artifactId>birdseye_compare</artifactId>
-			<version>${birdseye.version}</version>
-		</dependency>
 	</dependencies>
-
 </project>

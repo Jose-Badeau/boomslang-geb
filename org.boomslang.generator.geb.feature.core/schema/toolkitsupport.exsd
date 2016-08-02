@@ -55,7 +55,7 @@
                   Custom code for the generator.
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":org.boomslang.dsl.generator.feature.IBoomGenerator"/>
+                  <meta.attribute kind="java" basedOn=":org.boomslang.generator.geb.feature.core.IBoomGenerator"/>
                </appInfo>
             </annotation>
          </attribute>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.boomslang.generator.geb.feature"
-      label="Boomslang STMPBot Test Generator"
+      label="Boomslang Geb Test Generator"
       version="0.1.0.qualifier"
-      provider-name="UBS AG">
+      provider-name="">
 
    <description>
-      STMPBot generator. Converts boomslang specifications into
+      Geb generator. Converts boomslang specifications into Geb code
    </description>
 
    <copyright url="http://www.example.com/copyright">
@@ -59,28 +59,28 @@
    </requires>
 
    <plugin
-         id="org.boomslang.generator.feature.geb"
+         id="org.boomslang.generator.geb.feature.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.boomslang.generator.mapping.geb"
+         id="org.boomslang.generator.geb.mapping.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.boomslang.generator.feature.geb.ui"
+         id="org.boomslang.generator.geb.feature.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.boomslang.generator.mapping.geb.ui"
+         id="org.boomslang.generator.geb.mapping.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

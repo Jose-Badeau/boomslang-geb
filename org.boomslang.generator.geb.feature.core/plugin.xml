@@ -5,7 +5,7 @@
    <extension
          point="org.boomslang.generator.feature.support">
       <client
-            customGenerator="org.boomslang.dsl.generator.feature.BFeatureGenerator">
+            customGenerator="org.boomslang.generator.geb.feature.core.BFeatureGenerator">
       </client>
    </extension>
 

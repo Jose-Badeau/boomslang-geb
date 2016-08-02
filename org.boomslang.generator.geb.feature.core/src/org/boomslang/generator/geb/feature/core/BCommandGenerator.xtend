@@ -1,4 +1,4 @@
-package org.boomslang.dsl.generator.feature
+package org.boomslang.generator.geb.feature.core
 
 import org.boomslang.dsl.feature.feature.BClickCommand
 import org.boomslang.dsl.feature.feature.BCommand

@@ -14,9 +14,7 @@
 	<artifactId>org.boomslang.generator.geb.feature</artifactId>
 	<packaging>eclipse-feature</packaging>
 	<name>Boomslang Geb Generator Feature</name>
-	<description>
-		Delivers the STMPBot generator.
-	</description>
+	<description>Delivers the Geb generator.</description>
     <build>
         <plugins>
             <plugin>
@@ -30,5 +28,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

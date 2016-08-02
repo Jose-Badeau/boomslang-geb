@@ -1,4 +1,4 @@
-package org.boomslang.dsl.generator.mapping
+package org.boomslang.generator.geb.mapping.core
 
 import com.google.inject.Inject
 import org.eclipse.emf.common.util.BasicEList

@@ -4,7 +4,7 @@
    <extension
          point="org.boomslang.generator.mapping.support">
       <client
-            customGenerator="org.boomslang.dsl.generator.mapping.BMappingGenerator">
+            customGenerator="org.boomslang.generator.geb.mapping.core.BMappingGenerator">
       </client>
    </extension>
 

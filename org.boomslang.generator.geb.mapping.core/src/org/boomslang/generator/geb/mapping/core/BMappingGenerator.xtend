@@ -1,4 +1,4 @@
-package org.boomslang.dsl.generator.mapping
+package org.boomslang.generator.geb.mapping.core
 
 import org.boomslang.dsl.mapping.mapping.BMapping
 import org.boomslang.dsl.mapping.mapping.BMappingPackage
@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.IFileSystemAccess
 
-import static org.boomslang.generator.mapping.geb.ui.GebOutputConfigurationProvider.*
+import static org.boomslang.generator.geb.mapping.ui.GebOutputConfigurationProvider.*
  
 import static extension com.google.common.base.Strings.*
 

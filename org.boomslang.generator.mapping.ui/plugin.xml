@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="org.boomslang.generator.mapping.geb.ui.internal.ExecutableExtensionFactory:org.eclipse.xtext.builder.BuilderParticipant">
+            class="org.boomslang.generator.geb.mapping.ui.internal.ExecutableExtensionFactory:org.eclipse.xtext.builder.BuilderParticipant">
       </participant>
    </extension>
 

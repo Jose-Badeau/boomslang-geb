@@ -1,4 +1,4 @@
-package org.boomslang.dsl.generator.mapping
+package org.boomslang.generator.geb.mapping.core
 
 /**
  * This class maps widgets referenced to by the feature DSL

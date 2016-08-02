@@ -1,4 +1,4 @@
-package org.boomslang.generator.mapping.geb.ui
+package org.boomslang.generator.geb.mapping.ui
 
 import org.eclipse.xtext.generator.OutputConfigurationProvider
 import org.eclipse.xtext.generator.OutputConfiguration
@@ -14,7 +14,7 @@ class GebOutputConfigurationProvider extends OutputConfigurationProvider {
     
     public static val String OUTPUT_CONFIG_GEB_DIR = "src/main/groovy/gen"
  
-    /**
+    /** 
      * @return a list of custom output configurations with specific options
      * for each output configuration (e.g. directory name, whether the directory should
      * be cleaned on build, whether generated files should be marked as derived, etc.)

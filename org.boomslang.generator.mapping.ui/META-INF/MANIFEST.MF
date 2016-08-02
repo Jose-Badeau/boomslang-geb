@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Boomslang Mapping Generator UI
-Bundle-SymbolicName: org.boomslang.generator.mapping.geb.ui;singleton:=true
+Bundle-SymbolicName: org.boomslang.generator.geb.mapping.ui;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Bundle-Activator: org.boomslang.generator.mapping.geb.ui.Activator
+Bundle-Activator: org.boomslang.generator.geb.mapping.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.xtext,
@@ -15,4 +15,4 @@ Require-Bundle: org.eclipse.ui,
  org.boomslang.generator.feature.extension;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Export-Package: org.boomslang.generator.mapping.geb.ui
+Export-Package: org.boomslang.generator.geb.mapping.ui

@@ -1,8 +1,8 @@
-package org.boomslang.generator.mapping.geb.ui.internal;
+package org.boomslang.generator.geb.mapping.ui.internal;
 
 import org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory;
 import org.osgi.framework.Bundle;
-import org.boomslang.generator.mapping.geb.ui.Activator;
+import org.boomslang.generator.geb.mapping.ui.Activator;
 
 import com.google.inject.Injector;
 

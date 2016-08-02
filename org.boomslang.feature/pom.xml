@@ -32,7 +32,7 @@
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>org.boomslang.generator.feature.ui</artifactId>
+			<artifactId>org.boomslang.generator.feature.geb.ui</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
@@ -42,7 +42,7 @@
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>org.boomslang.generator.mapping.ui</artifactId>
+			<artifactId>org.boomslang.generator.mapping.geb.ui</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

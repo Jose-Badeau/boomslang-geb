@@ -11,7 +11,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>org.boomslang.repository</artifactId>
+	<artifactId>org.boomslang.generator.geb.repository</artifactId>
 	<packaging>eclipse-repository</packaging>
 	<name>Boomslang Geb Generator Repository</name>
 	<properties>

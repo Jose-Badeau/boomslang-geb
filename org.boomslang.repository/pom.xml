@@ -13,7 +13,7 @@
 
 	<artifactId>org.boomslang.repository</artifactId>
 	<packaging>eclipse-repository</packaging>
-	<name>Boomslang GEb Generator Repository</name>
+	<name>Boomslang Geb Generator Repository</name>
 
 	<properties>
         <p2.component>geb</p2.component>

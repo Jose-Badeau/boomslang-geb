@@ -23,6 +23,7 @@
 		<selenium.version>2.47.1</selenium.version>
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
+		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 	</properties>
 		<repositories>
 		<repository>

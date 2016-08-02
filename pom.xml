@@ -170,9 +170,9 @@
 					<configuration>
 						<target>
 							<artifact>
-								<groupId>org.boomslang.geb.generator</groupId>
-								<artifactId>boomslang</artifactId>
-	  							<version>${project.version}</version>
+								 <groupId>${project.groupId}</groupId>
+                            <artifactId>org-boomslang-targetplatform</artifactId>
+                            <version>${project.version}</version>
 	  						</artifact>
 						</target>
 						<resolver>p2</resolver>

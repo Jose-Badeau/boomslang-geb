@@ -73,14 +73,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.boomslang.generator.feature.ui"
+         id="org.boomslang.generator.feature.geb.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.boomslang.generator.mapping.ui"
+         id="org.boomslang.generator.mapping.geb.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

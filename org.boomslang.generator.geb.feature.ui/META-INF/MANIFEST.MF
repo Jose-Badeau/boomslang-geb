@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.boomslang.generator.feature.geb.ui;singleton:=true
+Bundle-SymbolicName: org.boomslang.generator.geb.feature.ui;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Bundle-Activator: org.boomslang.generator.feature.geb.ui.Activator
+Bundle-Activator: org.boomslang.generator.geb.feature.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.xtext,
@@ -14,5 +14,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.xtext.ui,
  org.boomslang.generator.feature.extension;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: org.boomslang.generator.feature.geb.ui
+Export-Package: org.boomslang.generator.geb.feature.ui
 Bundle-ActivationPolicy: lazy

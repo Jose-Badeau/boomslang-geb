@@ -1,4 +1,4 @@
-package org.boomslang.generator.feature.geb.ui
+package org.boomslang.generator.geb.feature.ui
 
 import org.eclipse.xtext.generator.OutputConfigurationProvider
 import org.eclipse.xtext.generator.OutputConfiguration

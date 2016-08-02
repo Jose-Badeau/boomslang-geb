@@ -11,7 +11,7 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-	<artifactId>org.boomslang.generator.feature.geb.ui</artifactId>
+	<artifactId>org.boomslang.generator.geb.feature.ui</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	<name>Boomslang Feature Generator UI</name>
 	<description>The Boomslang Generator module.</description>

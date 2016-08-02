@@ -1,11 +1,11 @@
-package org.boomslang.generator.feature.geb.ui;
+package org.boomslang.generator.geb.feature.ui;
 
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.generator.IOutputConfigurationProvider;
 import org.eclipse.xtext.service.AbstractGenericModule;
 
-import org.boomslang.generator.feature.geb.ui.GebOutputConfigurationProvider;
+import org.boomslang.generator.geb.feature.ui.GebOutputConfigurationProvider;
 
 import com.google.inject.Binder;
 

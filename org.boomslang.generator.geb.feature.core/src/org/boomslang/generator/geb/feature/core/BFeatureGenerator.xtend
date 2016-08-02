@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.naming.IQualifiedNameProvider
 
-import static org.boomslang.generator.feature.geb.ui.GebOutputConfigurationProvider.*
+import static org.boomslang.generator.geb.feature.ui.GebOutputConfigurationProvider.*
 
 import static extension org.apache.commons.lang.StringEscapeUtils.*
 import static extension org.eclipse.xtext.EcoreUtil2.*

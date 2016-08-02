@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.boomslang.geb.generator</groupId>
-	<artifactId>org.boomslang</artifactId>
+	<artifactId>org.boomslang.geb.generator</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<name>Geb Generator Project</name>
 	<description>All generator modules</description>

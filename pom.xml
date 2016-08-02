@@ -39,7 +39,7 @@
 	</repositories>
 
 	<modules>
-		<module>org.boomslang.targetplatform</module>
+		<module>org.boomslang.generator.geb.targetplatform</module>
 		<module>org.boomslang.generator.feature.geb</module>
 		<module>org.boomslang.generator.feature.ui</module>
 		<module>org.boomslang.generator.mapping.geb</module>

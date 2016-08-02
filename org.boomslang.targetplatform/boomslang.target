@@ -64,11 +64,11 @@
     <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
       <unit id="com.wireframesketcher.model.patch.feature.group" version="0.0.0"/>
       <unit id="com.wireframesketcher.feature.group" version="0.0.0"/>
-      <repository location="http://boomslang.org/updates/boomslang-wfs/repository"/>
+      <repository location="https://dl.bintray.com/jose-badeau/boomslang-wireframesketcher/"/>
     </location>
     <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
       <unit id="org.boomslang.feature.feature.group" version="0.0.0"/>
-      <repository location="http://bintray.com/jose-badeau/boomslang-core"/>
+      <repository location="http://dl.bintray.com/jose-badeau/boomslang-core/"/>
     </location>
     
     

@@ -24,6 +24,18 @@
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 	</properties>
+		<repositories>
+		<repository>
+			<id>boomslang-core</id>
+			<url>http://dl.bintray.com/jose-badeau/boomslang-core/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>boomslang-wfs</id>
+			<url>http://dl.bintray.com/jose-badeau/boomslang-wireframesketcher/</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
 
 	<modules>
 		<module>org.boomslang.targetplatform</module>

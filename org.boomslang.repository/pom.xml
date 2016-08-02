@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.boomslang.geb.generator</groupId>
+        <artifactId>org.boomslang</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>org.boomslang.repository</artifactId>
+	<packaging>eclipse-repository</packaging>
+	<name>Boomslang GEb Generator Repository</name>
+
+	<properties>
+        <p2.component>geb</p2.component>
+        <p2.deployment.destination>/tmp/p2</p2.deployment.destination>
+        <p2.repository.name>Geb P2 Test Repository</p2.repository.name>
+        <p2.base.url>http://localhost:8000</p2.base.url>
+        <p2.freename>testing.boomslang.geb</p2.freename>
+    </properties>   
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-maven-plugin</artifactId>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

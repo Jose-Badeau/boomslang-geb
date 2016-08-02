@@ -43,9 +43,9 @@
 		<module>org.boomslang.generator.geb.feature.core</module>
 		<module>org.boomslang.generator.geb.feature.ui</module>
 		<module>org.boomslang.generator.geb.mapping.core</module>
-		<module>org.boomslang.generator.gebmapping.ui</module>
+		<module>org.boomslang.generator.geb.mapping.ui</module>
 		<module>org.boomslang.generator.geb.feature</module>
-		<module>org.boomslang.repository</module>
+		<module>org.boomslang.generator.geb.repository</module>
 	</modules>
 
 	<build>
@@ -171,7 +171,7 @@
 						<target>
 							<artifact>
 								 <groupId>${project.groupId}</groupId>
-                            <artifactId>org-boomslang-targetplatform</artifactId>
+                            <artifactId>geb</artifactId>
                             <version>${project.version}</version>
 	  						</artifact>
 						</target>

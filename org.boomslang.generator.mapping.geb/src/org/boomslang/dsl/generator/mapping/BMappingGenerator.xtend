@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.IFileSystemAccess
 
-import static org.boomslang.generator.mapping.ui.GebOutputConfigurationProvider.*
+import static org.boomslang.generator.mapping.geb.ui.GebOutputConfigurationProvider.*
  
 import static extension com.google.common.base.Strings.*
 

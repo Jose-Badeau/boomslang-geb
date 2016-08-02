@@ -1,4 +1,4 @@
-package org.boomslang.generator.mapping.ui;
+package org.boomslang.generator.mapping.geb.ui;
 
 import org.apache.log4j.Logger;
 import org.eclipse.ui.plugin.AbstractUIPlugin;

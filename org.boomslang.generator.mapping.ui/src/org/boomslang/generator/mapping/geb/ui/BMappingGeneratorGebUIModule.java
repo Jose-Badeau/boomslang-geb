@@ -1,11 +1,11 @@
-package org.boomslang.generator.mapping.ui;
+package org.boomslang.generator.mapping.geb.ui;
 
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.generator.IOutputConfigurationProvider;
 import org.eclipse.xtext.service.AbstractGenericModule;
 import com.google.inject.Binder;
-import org.boomslang.generator.mapping.ui.GebOutputConfigurationProvider;
+import org.boomslang.generator.mapping.geb.ui.GebOutputConfigurationProvider;
 
 public class BMappingGeneratorGebUIModule extends AbstractGenericModule {
 	private final AbstractUIPlugin plugin;

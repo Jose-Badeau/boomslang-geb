@@ -1,4 +1,4 @@
-package org.boomslang.generator.mapping.ui
+package org.boomslang.generator.mapping.geb.ui
 
 import org.eclipse.xtext.generator.OutputConfigurationProvider
 import org.eclipse.xtext.generator.OutputConfiguration

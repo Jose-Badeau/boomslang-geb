@@ -3,17 +3,22 @@
  */
 package org.boomslang.generator.geb.feature.core
 
+import com.google.inject.Inject
+import com.wireframesketcher.model.Screen
+import java.util.List
 import org.boomslang.dsl.feature.feature.BAssertion
 import org.boomslang.dsl.feature.feature.BCodeStatement
-import org.boomslang.dsl.feature.feature.BCommand
+import org.boomslang.dsl.feature.feature.BComponentActionParameter
 import org.boomslang.dsl.feature.feature.BFeature
 import org.boomslang.dsl.feature.feature.BFeaturePackage
 import org.boomslang.dsl.feature.feature.BScenario
 import org.boomslang.dsl.feature.feature.BToFrameSwitch
 import org.boomslang.dsl.feature.feature.BToScreenSwitch
-import com.google.inject.Inject
-import java.util.List
+import org.boomslang.dsl.feature.services.WidgetTypeRefUtil
+import org.boomslang.generator.interfaces.IBoomAggregateGenerator
+import org.boomslang.generator.util.CodeSectionStatemachine
 import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.naming.IQualifiedNameProvider
 
@@ -21,11 +26,6 @@ import static org.boomslang.generator.geb.feature.ui.GebOutputConfigurationProvi
 
 import static extension org.apache.commons.lang.StringEscapeUtils.*
 import static extension org.eclipse.xtext.EcoreUtil2.*
-import org.boomslang.dsl.feature.services.WidgetTypeRefUtil
-import com.wireframesketcher.model.Screen
-import org.boomslang.generator.interfaces.IBoomAggregateGenerator
-import org.eclipse.emf.ecore.resource.ResourceSet
-import org.boomslang.generator.util.CodeSectionStatemachine
 
 /**
  * Generates code from your model files on save.
@@ -168,7 +168,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 	 	// generator does not yet support code statements of type «it.eClass.name»
 	 '''
 
-	def dispatch compile(BCommand it) {
+	def dispatch compile(BComponentActionParameter it) {
 		bCommandGenerator.compile(it)
 	}
 	

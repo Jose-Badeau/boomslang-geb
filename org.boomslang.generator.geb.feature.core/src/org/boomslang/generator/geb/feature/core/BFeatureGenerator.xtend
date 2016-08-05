@@ -4,7 +4,6 @@
 package org.boomslang.generator.geb.feature.core
 
 import com.google.inject.Inject
-import com.wireframesketcher.model.Screen
 import java.util.List
 import org.boomslang.dsl.feature.feature.BAssertion
 import org.boomslang.dsl.feature.feature.BCodeStatement
@@ -14,7 +13,6 @@ import org.boomslang.dsl.feature.feature.BFeaturePackage
 import org.boomslang.dsl.feature.feature.BScenario
 import org.boomslang.dsl.feature.feature.BToFrameSwitch
 import org.boomslang.dsl.feature.feature.BToScreenSwitch
-import org.boomslang.dsl.feature.services.WidgetTypeRefUtil
 import org.boomslang.generator.interfaces.IBoomAggregateGenerator
 import org.boomslang.generator.util.CodeSectionStatemachine
 import org.eclipse.emf.ecore.resource.Resource
@@ -35,8 +33,6 @@ import static extension org.eclipse.xtext.EcoreUtil2.*
 class BFeatureGenerator implements IBoomAggregateGenerator {
 	
 	@Inject protected extension IQualifiedNameProvider
-	
-	@Inject extension WidgetTypeRefUtil
 	
 	@Inject CodeSectionStatemachine codeSectionStatemachine
 	
@@ -123,37 +119,11 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		«IF it.nullOrEmpty»println "no commands were given to execute"«ENDIF»
 		«FOR codeStatement : it»
 		«codeSectionStatemachine.computeSectionHeader(codeStatement)»
-		«compileCodeStatementWithFrameWrapper(codeStatement)»
 		«ENDFOR»
 		
 	'''
 	
-	def compileCodeStatementWithFrameWrapper(BCodeStatement codeStatement) {
-		val contextInfo = codeStatement.contextInfoOfNearestContext
-		val frameName = contextInfo?.frameName
-		val widgetContainer = contextInfo?.widgetContainer
-		val widgetContainerName = switch (widgetContainer) {
-			Screen : {
-				widgetContainer.name				
-			}
-		}
-		if (widgetContainerName.nullOrEmpty) {
-			throw new Exception("could not find widget container")
-		}
-		
-		val inFrame = !(codeStatement instanceof BToScreenSwitch) &&
-		!(codeStatement instanceof BToFrameSwitch) && 
-		frameName != null
-		'''
-		«IF inFrame»
-			withFrame(«frameName», «widgetContainerName») {
-		«ENDIF»
-			«compile(codeStatement)»
-		«IF inFrame»
-			}
-		«ENDIF»
-		'''
-	}
+	
 	
 	// =============================================================================
 	// CodeStatement

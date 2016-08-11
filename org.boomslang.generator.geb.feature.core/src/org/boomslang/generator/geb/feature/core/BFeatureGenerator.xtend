@@ -7,7 +7,7 @@ import com.google.inject.Inject
 import java.util.List
 import org.boomslang.dsl.feature.feature.BAssertion
 import org.boomslang.dsl.feature.feature.BCodeStatement
-import org.boomslang.dsl.feature.feature.BComponentActionParameter
+import org.boomslang.dsl.feature.feature.BCommandComponentActionParameter
 import org.boomslang.dsl.feature.feature.BFeature
 import org.boomslang.dsl.feature.feature.BFeaturePackage
 import org.boomslang.dsl.feature.feature.BScenario
@@ -138,7 +138,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 	 	// generator does not yet support code statements of type «it.eClass.name»
 	 '''
 
-	def dispatch compile(BComponentActionParameter it) {
+	def dispatch compile(BCommandComponentActionParameter it) {
 		bCommandGenerator.compile(it)
 	}
 	

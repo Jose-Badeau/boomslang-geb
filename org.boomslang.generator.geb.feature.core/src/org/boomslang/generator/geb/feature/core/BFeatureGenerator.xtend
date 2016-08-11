@@ -5,13 +5,12 @@ package org.boomslang.generator.geb.feature.core
 
 import com.google.inject.Inject
 import java.util.List
-import org.boomslang.dsl.feature.feature.BAssertion
+import org.boomslang.dsl.feature.feature.BAssertionAction
 import org.boomslang.dsl.feature.feature.BCodeStatement
 import org.boomslang.dsl.feature.feature.BCommandComponentActionParameter
 import org.boomslang.dsl.feature.feature.BFeature
 import org.boomslang.dsl.feature.feature.BFeaturePackage
 import org.boomslang.dsl.feature.feature.BScenario
-import org.boomslang.dsl.feature.feature.BToFrameSwitch
 import org.boomslang.dsl.feature.feature.BToScreenSwitch
 import org.boomslang.generator.interfaces.IBoomAggregateGenerator
 import org.boomslang.generator.util.CodeSectionStatemachine
@@ -142,7 +141,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		bCommandGenerator.compile(it)
 	}
 	
-	def dispatch compile(BAssertion it) {
+	def dispatch compile(BAssertionAction it) {
 		bAssertionGenerator.compile(it)
 	}
 
@@ -151,12 +150,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 	// Screen switch
 	// =============================================================================
 	 
-	// switches  context
-	def dispatch compile(BToFrameSwitch it) '''
-		println("Switching to frame «it.frameID»")
-	'''
 	
-	// TODO FIXME	 
 	def dispatch compile(BToScreenSwitch it) '''
 		at «it.screen.name»Screen
 	'''

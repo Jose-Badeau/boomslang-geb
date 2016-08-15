@@ -12,7 +12,7 @@ class GebOutputConfigurationProvider extends OutputConfigurationProvider {
     
     public static val String OUTPUT_CONFIG_GEB = "OUTPUT_CONFIG_GEB";
     
-    public static val String OUTPUT_CONFIG_GEB_DIR = "src/main/groovy/gen"
+    public static val String OUTPUT_CONFIG_GEB_DIR = "src-gen"
  
     /**
      * @return a list of custom output configurations with specific options

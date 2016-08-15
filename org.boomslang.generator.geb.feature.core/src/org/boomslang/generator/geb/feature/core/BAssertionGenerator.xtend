@@ -1,10 +1,11 @@
 package org.boomslang.generator.geb.feature.core
 
 import com.google.inject.Inject
-import org.boomslang.dsl.feature.feature.BAssertionAction
+import org.boomslang.dsl.feature.feature.BAssertionComponentActionParameter
 import org.boomslang.dsl.feature.feature.BBooleanAssertionAction
 import org.boomslang.dsl.feature.services.WidgetTypeRefUtil
 import org.boomslang.generator.util.BGeneratorUtil
+import org.boomslang.dsl.feature.feature.impl.BBooleanAssertionActionImpl
 
 class BAssertionGenerator {
 
@@ -18,12 +19,12 @@ class BAssertionGenerator {
 	// =============================================================================
 
 
-	def dispatch compile(BAssertionAction it) '''
+	def dispatch compile(BAssertionComponentActionParameter it) '''
 	// TODO
 	println "Assertions of type «it.eClass.name» not yet implemented"'''
 
 	
-	def dispatch compile(BBooleanAssertionAction it) '''
+	def dispatch compile(BBooleanAssertionActionImpl it) '''
 		«IF it.booleanPropertyName == 'visible'»
 		waitFor { «it.widgetBeforeOffset.name» }
 		«ELSE»

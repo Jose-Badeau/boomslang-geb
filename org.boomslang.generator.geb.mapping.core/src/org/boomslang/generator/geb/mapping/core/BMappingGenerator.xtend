@@ -90,8 +90,8 @@ class BMappingGenerator implements IBoomAggregateGenerator {
 
     def compileWidgetMappingNavigatorPart(BWidgetMapping it,
         String effectiveBaseNavigator
-    ) '''{ new «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»(«it.
-			locator.compileExp») }
+    ) '''(required: true , wait:true){module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»,$("«it.
+			locator.compileExp»)" }
     '''
 
     def dispatch CharSequence compileExp(Void it) ''''''

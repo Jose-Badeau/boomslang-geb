@@ -28,3 +28,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
+Export-Package: org.boomslang.generator.geb.feature.core

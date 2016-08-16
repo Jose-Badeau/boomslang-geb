@@ -31,8 +31,5 @@ class BCommandGenerator {
 	
 	def dispatch compileAction(BTypeAction it)'''
 	«it.value.compileStringOrParam»
-	'''	
-	
-
-	
+	'''		
 }

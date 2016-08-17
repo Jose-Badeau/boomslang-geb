@@ -20,6 +20,8 @@ import static org.boomslang.generator.geb.mapping.ui.GebOutputConfigurationProvi
 import static extension com.google.common.base.Strings.*
 import com.wireframesketcher.model.Button
 import static extension org.eclipse.xtext.EcoreUtil2.*
+import com.wireframesketcher.model.Widget
+import com.wireframesketcher.model.TextField
 
 class BMappingGenerator implements IBoomAggregateGenerator {
 	
@@ -94,15 +96,28 @@ class BMappingGenerator implements IBoomAggregateGenerator {
 
     def compileWidgetMappingNavigatorPart(BWidgetMapping it,
         String effectiveBaseNavigator
-    ) '''(required: true , wait:true) {«compileModule(effectiveBaseNavigator)»$("«it.
+    ) '''(required: true«compileWait») {«compileModule(effectiveBaseNavigator)»$("«it.
 			locator.compileExp»") }
     '''
+    
+	def compileWait(BWidgetMapping it)'''
+	«IF widget.waitRequired» , wait:true«ENDIF»'''
 	
 	def compileModule(BWidgetMapping it,
         String effectiveBaseNavigator)
 	'''
-	«IF !(it.widget instanceof Button)» module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»,«ENDIF» '''
-    def dispatch CharSequence compileExp(Void it) ''''''
+	«IF widget.isDefaultModuleRequired» module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»,«ENDIF» '''
+   
+   
+   	def isWaitRequired(Widget widget){
+   		!(widget instanceof TextField)
+   	}
+   	
+	def isDefaultModuleRequired(Widget widget){
+		!(widget instanceof Button)&& !(widget instanceof TextField)
+	}
+
+	def dispatch CharSequence compileExp(Void it) ''''''
 
     def dispatch CharSequence compileExp(MExpression it) ''''''
 

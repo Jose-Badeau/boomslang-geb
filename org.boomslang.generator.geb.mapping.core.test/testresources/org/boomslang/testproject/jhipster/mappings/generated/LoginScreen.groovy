@@ -7,8 +7,8 @@ class LoginScreen extends org.boomslang.pages.BoomslangScreen {
 	static at = { waitFor { title == "Login" } }
 
 	static content = {
-		UserName (required: true , wait:true) { module org.boomslang.test.jhipster.TextInputModule, $("#username") }
-		Password (required: true , wait:true) { module org.boomslang.test.jhipster.TextInputModule, $("#password") }
+		UserName (required: true) { $("#username") }
+		Password (required: true) { $("#password") }
 		Submit (required: true , wait:true) { $("#submit") }
 	}
 

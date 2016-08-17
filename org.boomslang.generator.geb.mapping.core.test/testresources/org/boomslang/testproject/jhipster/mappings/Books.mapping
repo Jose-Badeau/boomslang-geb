@@ -6,6 +6,6 @@ url {fragment:"#/books"}
 label {"Books"}
 
 Books {
-	navigator:org.boomslang.testproject.jhipster.TableModule
+	driver:org.boomslang.testproject.jhipster.TableModule
 	locator:"#books"
 }

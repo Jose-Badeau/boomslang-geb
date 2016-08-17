@@ -8,6 +8,6 @@ Mapping Register
 url {fragment:"#/register"}
 label {nls{en:"Register"}}
 Title{
-	navigator:org.boomslang.test.jhipster.DropdownModule
+	driver:org.boomslang.test.jhipster.DropdownModule
 	locator:"#register"
 }

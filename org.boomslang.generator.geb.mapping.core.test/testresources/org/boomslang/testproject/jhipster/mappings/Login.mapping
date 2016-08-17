@@ -8,7 +8,7 @@ Mapping Login
 url {fragment:"#/login"}
 label {nls{en:"Login"}}
 UserName{
-	navigator:org.boomslang.test.jhipster.TextInputModule
+	driver:org.boomslang.test.jhipster.TextInputModule
 	locator:"#username"
 }
 
@@ -17,6 +17,6 @@ Password{
 }
 
 Submit{
-	navigator:org.boomslang.test.jhipster.DropdownModule
+	driver:org.boomslang.test.jhipster.DropdownModule
 	locator:"#submit"
 }

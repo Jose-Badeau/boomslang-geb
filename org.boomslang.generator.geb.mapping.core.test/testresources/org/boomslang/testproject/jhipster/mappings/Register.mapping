@@ -1,0 +1,13 @@
+
+package org.boomslang.testproject.jhipster.mappings
+
+import org.boomslang.testproject.jhipster.screens.Register
+
+Mapping Register
+
+url {fragment:"#/register"}
+label {nls{en:"Register"}}
+Title{
+	navigator:org.boomslang.test.jhipster.DropdownModule
+	locator:"#register"
+}

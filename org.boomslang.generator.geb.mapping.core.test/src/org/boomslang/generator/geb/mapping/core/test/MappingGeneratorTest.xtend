@@ -21,22 +21,54 @@ class MappingGeneratorTest extends AbstractXtextTests{
     @Inject BMappingGenerator underTest
     @Inject extension ParseHelper<BMappingPackage> parseHelper 
     
+    val basePath= 'org/boomslang/testproject/jhipster/'
+    val mappingPath=basePath+'mappings/'
+    val screenPath=basePath+'screens/'
+    val generatedPath=mappingPath+'generated/'
+    val outputPath="OUTPUT_CONFIG_GEB"+screenPath
+    
     
 	@Inject
 	XtextResourceSet xtextResourceSet
 	
 	
 	@Test
-    def test() {
-    	xtextResourceSet.loadScreen("org/boomslang/testproject/jhipster/screens/Login.screen")
-        val model= 'org/boomslang/testproject/jhipster/mappings/Login.mapping'.readFileIntoString().parse(xtextResourceSet)
+    def testTextInputAndButton() {
+		executeTest("Login")
+    }
+       
+	@Test
+    def testDropdown() {
+    	executeTest("Register")
+       }
+    
+    /**
+     * Method that does the actual test
+     */
+    def executeTest(String screen){
+        xtextResourceSet.loadScreen(screen.screenPath)
+        val model= (screen.mappingPath).readFileIntoString().parse(xtextResourceSet)
         val fsa = new InMemoryFileSystemAccess()
         underTest.doGenerate(model.eResource, fsa)
         assertEquals(1,fsa.allFiles.size)
-        assertTrue(fsa.allFiles.containsKey("OUTPUT_CONFIG_GEBorg/boomslang/testproject/jhipster/screens/LoginScreen.groovy"))
-        assertEquals('org/boomslang/testproject/jhipster/mappings/generated/LoginScreen.groovy'.readFileIntoString(), fsa.allFiles.get("OUTPUT_CONFIG_GEBorg/boomslang/testproject/jhipster/screens/LoginScreen.groovy").toString
-        )
-       }
+        assertTrue(fsa.allFiles.containsKey(screen.outputPath))
+        assertEquals(screen.generatedPath.readFileIntoString(), fsa.allFiles.get(screen.outputPath).toString)	
+    }
+    def mappingPath (String screenName){
+    	mappingPath+screenName+".mapping"
+    }
+    
+    def screenPath (String screenName){
+    	screenPath+screenName+".screen"
+    }
+    
+    def generatedPath(String screenName){
+    	generatedPath+screenName+"Screen.groovy"
+    }
+    
+    def outputPath(String screenName){
+    	outputPath+screenName+"Screen.groovy"
+    }
        	/**
 	 * Name with pending .screen
 	 */

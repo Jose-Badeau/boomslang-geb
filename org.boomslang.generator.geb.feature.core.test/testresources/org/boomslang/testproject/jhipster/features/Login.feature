@@ -14,3 +14,11 @@ Scenario "Login"
 	when I from the UserName textfield I type "JohnDoe"
 	and I from the Password textfield I type "Password"
 	then the Submit button is not locked
+	
+Scenario "Login Wrong Password"
+	Given I am on the Login screen 
+	when I from the UserName textfield I type "JohnDoe"
+	and I from the Password textfield I type "Password_Wrong"
+	then the Submit button is not locked
+	when I from the Submit button I click 
+	then I am on the Login screen 

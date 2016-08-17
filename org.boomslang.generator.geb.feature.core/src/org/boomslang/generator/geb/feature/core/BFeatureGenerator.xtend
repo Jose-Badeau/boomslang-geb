@@ -26,6 +26,8 @@ import static extension org.apache.commons.lang.StringEscapeUtils.*
 import static extension org.eclipse.xtext.EcoreUtil2.*
 import org.boomslang.dsl.feature.feature.BCommandComponent
 import org.boomslang.dsl.feature.feature.BCommandAction
+import org.boomslang.dsl.feature.feature.BTypeAction
+import org.boomslang.dsl.feature.feature.BSelectAction
 
 /**
  * Generates code from your model files on save.
@@ -99,8 +101,8 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		
 			«it.codeStatements.compileCodeStatements(false, codeSectionStatemachine)»
 			where:
-			«FOR codeStatement:it.codeStatements.filter(BCommandComponent).sortBy[widget.widget.name] SEPARATOR " | "»$«codeStatement.widget.widget.name.toFirstLower»«ENDFOR»
-			«FOR codeStatement:it.codeStatements.filter(BCommandComponent).sortBy[widget.widget.name] SEPARATOR " | "»«bCommandGenerator.compileAction(codeStatement.action)»«ENDFOR»
+			«FOR codeStatement:sortedCodeStatements SEPARATOR " | "»$«codeStatement.widget.widget.name.toFirstLower»«ENDFOR»
+			«FOR codeStatement:sortedCodeStatements SEPARATOR " | "»«bCommandGenerator.compileActionParameter(codeStatement.action)»«ENDFOR»
 		}
 		
 	'''}
@@ -175,7 +177,10 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 	def private BScenario parentScenario(List<BCodeStatement> it) {
 		it.head?.getContainerOfType(BScenario)
 	}
-
+	
+	def private getSortedCodeStatements(BScenario it){
+		it.codeStatements.filter(BCommandComponent).filter[it.action instanceof BTypeAction || it.action instanceof BSelectAction].sortBy[it.widgetBeforeOffset.name]
+	}
     override doGenerate(ResourceSet input, IFileSystemAccess fsa) {
      // Not needed in this implementation
     }

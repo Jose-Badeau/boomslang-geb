@@ -7,7 +7,7 @@ class RegisterScreen extends org.boomslang.pages.BoomslangScreen {
 	static at = { waitFor { title == "Register" } }
 
 	static content = {
-		Title (required: true , wait:true) { module org.boomslang.test.jhipster.DropdownModule, $("#register") }
+		title (required: true , wait:true) { module org.boomslang.test.jhipster.DropdownModule, $("#register") }
 	}
 
 }

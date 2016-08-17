@@ -1,5 +1,8 @@
 package org.boomslang.generator.geb.mapping.core
 
+import com.wireframesketcher.model.TextField
+import com.wireframesketcher.model.Widget
+import java.util.regex.Pattern
 import org.boomslang.dsl.mapping.mapping.BMapping
 import org.boomslang.dsl.mapping.mapping.BMappingPackage
 import org.boomslang.dsl.mapping.mapping.BNlsLangDecl
@@ -10,18 +13,13 @@ import org.boomslang.dsl.mapping.mapping.MExpression
 import org.boomslang.dsl.mapping.mapping.MNlsMultiLangExpr
 import org.boomslang.dsl.mapping.mapping.MStringLiteral
 import org.boomslang.generator.interfaces.IBoomAggregateGenerator
-import java.util.regex.Pattern
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.IFileSystemAccess
 
 import static org.boomslang.generator.geb.mapping.ui.GebOutputConfigurationProvider.*
- 
+
 import static extension com.google.common.base.Strings.*
-import com.wireframesketcher.model.Button
-import static extension org.eclipse.xtext.EcoreUtil2.*
-import com.wireframesketcher.model.Widget
-import com.wireframesketcher.model.TextField
 
 class BMappingGenerator implements IBoomAggregateGenerator {
 	
@@ -91,7 +89,7 @@ class BMappingGenerator implements IBoomAggregateGenerator {
     def compileMappingUrl(BUrl it) '''«getMFragment.compileExp»'''
 
     def compileBWidgetMapping(BWidgetMapping it, String effectiveBaseNavigator) '''
-        «it.widget.name» «compileWidgetMappingNavigatorPart(it, effectiveBaseNavigator)»
+        «it.widget.name.toFirstLower» «compileWidgetMappingNavigatorPart(it, effectiveBaseNavigator)»
     '''
 
     def compileWidgetMappingNavigatorPart(BWidgetMapping it,

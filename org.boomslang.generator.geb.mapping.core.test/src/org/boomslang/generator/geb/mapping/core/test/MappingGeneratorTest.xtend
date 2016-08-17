@@ -40,7 +40,12 @@ class MappingGeneratorTest extends AbstractXtextTests{
 	@Test
     def testDropdown() {
     	executeTest("Register")
-       }
+    }
+    
+    @Test
+    def testTable() {
+    	executeTest("Books")
+    }
     
     /**
      * Method that does the actual test

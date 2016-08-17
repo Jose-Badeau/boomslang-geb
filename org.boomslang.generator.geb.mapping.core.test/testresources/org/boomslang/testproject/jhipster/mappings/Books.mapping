@@ -1,0 +1,11 @@
+package org.boomslang.testproject.jhipster.mappings
+import org.boomslang.testproject.jhipster.screens.Books
+
+Mapping Books
+url {fragment:"#/books"}
+label {"Books"}
+
+Books {
+	navigator:org.boomslang.testproject.jhipster.TableModule
+	locator:"#books"
+}

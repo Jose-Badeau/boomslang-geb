@@ -24,6 +24,8 @@ import static org.boomslang.generator.geb.feature.ui.GebOutputConfigurationProvi
 
 import static extension org.apache.commons.lang.StringEscapeUtils.*
 import static extension org.eclipse.xtext.EcoreUtil2.*
+import org.boomslang.dsl.feature.feature.BCommandComponent
+import org.boomslang.dsl.feature.feature.BCommandAction
 
 /**
  * Generates code from your model files on save.
@@ -96,11 +98,9 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		def "«it.name./** TODO ValueConverter */ replaceAll('^"','').replaceAll('"$','').escapeJava»"() {
 		
 			«it.codeStatements.compileCodeStatements(false, codeSectionStatemachine)»
-		
-			«IF !it.dataProvider.nullOrEmpty»
-				where:
-				[«FOR p: it.params.map[name] SEPARATOR ", "»«p»«ENDFOR»] << new «dataProvider»().daten()
-			«ENDIF»
+			where:
+			«FOR codeStatement:it.codeStatements.filter(BCommandComponent).sortBy[widget.widget.name] SEPARATOR " | "»$«codeStatement.widget.widget.name.toFirstLower»«ENDFOR»
+			«FOR codeStatement:it.codeStatements.filter(BCommandComponent).sortBy[widget.widget.name] SEPARATOR " | "»«bCommandGenerator.compileAction(codeStatement.action)»«ENDFOR»
 		}
 		
 	'''}
@@ -113,7 +113,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		«IF compilingDependency»
 		/* dependency: code from Scenario «parentScenarioName» */«ENDIF»
 		«IF preScenario == null»given:
-			to «it.parentScenario.BToScreenSwitch.screen.fullyQualifiedName»Screen«ENDIF»
+			to («it.parentScenario.BToScreenSwitch.screen.fullyQualifiedName»Screen«ENDIF»);
 		«IF preScenario != null && !compilingDependency»
 		
 		/* the code from Scenario «parentScenarioName» */

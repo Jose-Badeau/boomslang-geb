@@ -8,18 +8,20 @@ class LoginFeature extends org.boomslang.features.BoomslangFeature {
 	def "Login"() {
 	
 		given:
-			to org.boomslang.testproject.jhipster.screens.LoginScreen
+			to (org.boomslang.testproject.jhipster.screens.LoginScreen);
 		
 		when:
-		UserName.value "JohnDoe"
+		UserName.value $userName
 		and:
-		Password.value "Password"
+		Password.value $password
 		
 		then:
 		// TODO
 		println "Assertions of type BAssertionComponent not yet implemented"
 		
-	
+		where:
+		$password | $userName
+		"Password" | "JohnDoe"
 	}
 	
 

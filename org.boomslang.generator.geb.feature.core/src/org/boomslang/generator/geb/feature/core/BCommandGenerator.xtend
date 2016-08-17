@@ -21,8 +21,7 @@ class BCommandGenerator {
 	'''
 
 	def dispatch compile(BCommandComponent it)'''
-	«it.widget.widget.name».value «action.compileAction» 
-	'''	
+	«it.widget.widget.name».value $«it.widget.widget.name.toFirstLower»'''	
 	
 	def dispatch compileAction(BCommandAction it)'''
 	// TODO
@@ -30,6 +29,5 @@ class BCommandGenerator {
 	'''
 	
 	def dispatch compileAction(BTypeAction it)'''
-	«it.value.compileStringOrParam»
-	'''		
+	«it.value.compileStringOrParam»'''		
 }

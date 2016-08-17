@@ -18,6 +18,5 @@ Password{
 }
 
 Submit{
-	navigator:org.boomslang.test.jhipster.ButtonInputModule
 	locator:"#submit"
 }

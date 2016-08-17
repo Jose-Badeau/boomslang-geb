@@ -18,8 +18,12 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import static org.boomslang.generator.geb.mapping.ui.GebOutputConfigurationProvider.*
  
 import static extension com.google.common.base.Strings.*
+import com.wireframesketcher.model.Button
+import static extension org.eclipse.xtext.EcoreUtil2.*
 
 class BMappingGenerator implements IBoomAggregateGenerator {
+	
+	
 
     override doGenerate(Resource resource, IFileSystemAccess fsa) {
         if (resource == null) {
@@ -46,7 +50,7 @@ class BMappingGenerator implements IBoomAggregateGenerator {
         val screenSimpleName = matcher.group(2)
         val screenDir = screenPackage.replaceAll('''\.''', "/")
 
-        val effectiveBaseNavigator = if (it.screenNavigator.nullOrEmpty) {
+        val effectiveBaseNavigator = if (it.screenNavigator.nullOrEmpty ) {
                 "org.boomslang.navigators.BoomslangNonEmptyNavigator"
             } else {
                 it.screenNavigator
@@ -90,10 +94,14 @@ class BMappingGenerator implements IBoomAggregateGenerator {
 
     def compileWidgetMappingNavigatorPart(BWidgetMapping it,
         String effectiveBaseNavigator
-    ) '''(required: true , wait:true){module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»,$("«it.
-			locator.compileExp»)" }
+    ) '''(required: true , wait:true) {«compileModule(effectiveBaseNavigator)»$("«it.
+			locator.compileExp»") }
     '''
-
+	
+	def compileModule(BWidgetMapping it,
+        String effectiveBaseNavigator)
+	'''
+	«IF !(it.widget instanceof Button)» module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»,«ENDIF» '''
     def dispatch CharSequence compileExp(Void it) ''''''
 
     def dispatch CharSequence compileExp(MExpression it) ''''''

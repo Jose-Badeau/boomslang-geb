@@ -44,6 +44,7 @@
 		<module>org.boomslang.generator.geb.feature.core.test</module>
 		<module>org.boomslang.generator.geb.feature.ui</module>
 		<module>org.boomslang.generator.geb.mapping.core</module>
+		<module>org.boomslang.generator.geb.mapping.core.test</module>
 		<module>org.boomslang.generator.geb.mapping.ui</module>
 		<module>org.boomslang.generator.geb.feature</module>
 		<module>org.boomslang.generator.geb.repository</module>

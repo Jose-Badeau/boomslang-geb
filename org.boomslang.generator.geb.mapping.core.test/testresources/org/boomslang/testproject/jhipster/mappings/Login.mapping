@@ -1,0 +1,23 @@
+
+package org.boomslang.testproject.jhipster.mappings
+
+import org.boomslang.testproject.jhipster.screens.Login
+
+Mapping Login
+
+url {fragment:"#/login"}
+label {nls{en:"Login"}}
+UserName{
+	navigator:org.boomslang.test.jhipster.TextInputModule
+	locator:"#username"
+}
+
+Password{
+	navigator:org.boomslang.test.jhipster.TextInputModule
+	locator:"#password"
+}
+
+Submit{
+	navigator:org.boomslang.test.jhipster.ButtonInputModule
+	locator:"#submit"
+}

@@ -13,10 +13,10 @@ UserName{
 }
 
 Password{
-	navigator:org.boomslang.test.jhipster.TextInputModule
 	locator:"#password"
 }
 
 Submit{
+	navigator:org.boomslang.test.jhipster.DropdownModule
 	locator:"#submit"
 }

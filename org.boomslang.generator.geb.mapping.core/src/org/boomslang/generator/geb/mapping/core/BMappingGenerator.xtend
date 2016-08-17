@@ -53,7 +53,7 @@ class BMappingGenerator implements IBoomAggregateGenerator {
         val screenDir = screenPackage.replaceAll('''\.''', "/")
 
         val effectiveBaseNavigator = if (it.screenNavigator.nullOrEmpty ) {
-                "org.boomslang.navigators.BoomslangNonEmptyNavigator"
+                "org.boomslang.module.BoomslangModule"
             } else {
                 it.screenNavigator
             }
@@ -105,18 +105,13 @@ class BMappingGenerator implements IBoomAggregateGenerator {
 	
 	def compileModule(BWidgetMapping it,
         String effectiveBaseNavigator)
-	'''
-	«IF widget.isDefaultModuleRequired» module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF»,«ENDIF» '''
+	''' module «IF it.widgetNavigator == null»«effectiveBaseNavigator»«ELSE»«it.widgetNavigator»«ENDIF», '''
    
    
    	def isWaitRequired(Widget widget){
    		!(widget instanceof TextField)
    	}
    	
-	def isDefaultModuleRequired(Widget widget){
-		!(widget instanceof Button)&& !(widget instanceof TextField)
-	}
-
 	def dispatch CharSequence compileExp(Void it) ''''''
 
     def dispatch CharSequence compileExp(MExpression it) ''''''

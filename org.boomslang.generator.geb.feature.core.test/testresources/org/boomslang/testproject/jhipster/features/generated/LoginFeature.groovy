@@ -11,17 +11,40 @@ class LoginFeature extends org.boomslang.features.BoomslangFeature {
 			to (org.boomslang.testproject.jhipster.screens.LoginScreen);
 		
 		when:
-		UserName.value $userName
+		userName.value $userName
 		and:
-		Password.value $password
+		password.value $password
 		
 		then:
-		// TODO
-		println "Assertions of type BAssertionComponent not yet implemented"
+		submit.disabled==false
 		
 		where:
 		$password | $userName
 		"Password" | "JohnDoe"
+	}
+	
+	def "Login Wrong Password"() {
+	
+		given:
+			to (org.boomslang.testproject.jhipster.screens.LoginScreen);
+		
+		when:
+		userName.value $userName
+		and:
+		password.value $password
+		
+		then:
+		submit.disabled==false
+		
+		when:
+		submit.click()
+		
+		then:
+		at org.boomslang.testproject.jhipster.screens.LoginScreen
+		
+		where:
+		$password | $userName
+		"Password_Wrong" | "JohnDoe"
 	}
 	
 

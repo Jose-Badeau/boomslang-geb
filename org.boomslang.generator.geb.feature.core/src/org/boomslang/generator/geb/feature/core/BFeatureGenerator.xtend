@@ -28,6 +28,7 @@ import org.boomslang.dsl.feature.feature.BCommandComponent
 import org.boomslang.dsl.feature.feature.BCommandAction
 import org.boomslang.dsl.feature.feature.BTypeAction
 import org.boomslang.dsl.feature.feature.BSelectAction
+import com.wireframesketcher.model.Widget
 
 /**
  * Generates code from your model files on save.
@@ -181,6 +182,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 	def private getSortedCodeStatements(BScenario it){
 		it.codeStatements.filter(BCommandComponent).filter[it.action instanceof BTypeAction || it.action instanceof BSelectAction].sortBy[it.widgetBeforeOffset.name]
 	}
+	
     override doGenerate(ResourceSet input, IFileSystemAccess fsa) {
      // Not needed in this implementation
     }

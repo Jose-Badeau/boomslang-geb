@@ -37,10 +37,10 @@ class BCommandGenerator {
 	'''
 	
 	def dispatch compileAction(BTypeAction it)'''
-	«it.widgetBeforeOffset.name».value $«it.widgetBeforeOffset.name.toFirstLower»'''
+	«it.widgetBeforeOffset.name.toFirstLower».value $«it.widgetBeforeOffset.name.toFirstLower»'''
 	
 	def dispatch compileAction(BClickAction it)'''
-	«it.widgetBeforeOffset.name».click()
+	«it.widgetBeforeOffset.name.toFirstLower».click()
 	'''
 	
 	// =============================================================================

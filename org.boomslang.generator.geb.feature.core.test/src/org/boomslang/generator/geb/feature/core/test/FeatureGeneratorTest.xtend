@@ -34,7 +34,7 @@ class FeatureGeneratorTest extends AbstractXtextTests{
         underTest.doGenerate(model.eResource, fsa)
         assertEquals(1,fsa.allFiles.size)
         assertTrue(fsa.allFiles.containsKey("OUTPUT_CONFIG_GEBorg/boomslang/testproject/jhipster/features/LoginFeature.groovy"))
-        assertEquals('org/boomslang/testproject/jhipster/features/generated/Login.groovy'.readFileIntoString(), fsa.allFiles.get("OUTPUT_CONFIG_GEBorg/boomslang/testproject/jhipster/features/LoginFeature.groovy").toString
+        assertEquals('org/boomslang/testproject/jhipster/features/generated/LoginFeature.groovy'.readFileIntoString(), fsa.allFiles.get("OUTPUT_CONFIG_GEBorg/boomslang/testproject/jhipster/features/LoginFeature.groovy").toString
         )
        }
        	/**

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" name="org.boomslang.testproject.jhipster.screens.Tiles">
+  <widgets xsi:type="model:WidgetGroup" name="OfferingTile" id="6" x="259" y="250" measuredWidth="190" measuredHeight="175">
+    <widgets xsi:type="model:Panel" id="2" width="190" height="175" measuredWidth="190" measuredHeight="175" border="solid-rounded"/>
+    <widgets xsi:type="model:Label" id="3" x="29" y="62" text="TIA: 5.000.000" measuredWidth="111" measuredHeight="31">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" name="OfferingName" id="4" x="29" y="22" text="Manage Advance" measuredWidth="138" measuredHeight="31">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" name="Select" id="5" x="29" y="102" text="Select" measuredWidth="65" measuredHeight="33">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

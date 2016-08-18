@@ -8,6 +8,7 @@ import org.boomslang.dsl.feature.feature.BAssertionComponentActionParameter
 import org.boomslang.dsl.feature.feature.BBooleanAssertionAction
 import org.boomslang.dsl.feature.services.WidgetTypeRefUtil
 import org.boomslang.generator.util.BGeneratorUtil
+import org.boomslang.dsl.feature.feature.BClickAction
 
 class BAssertionGenerator {
 
@@ -50,4 +51,6 @@ class BAssertionGenerator {
 		IF booleanPropertyNotTrue»false«ELSE»true«ENDIF»
 		«ENDIF»
 	'''	
+	def dispatch compileAction(BClickAction it)'''
+	«it.BTileParameter?.BPropertyAssertionAction?.value?.compileIntOrStringOrParam»'''
 }

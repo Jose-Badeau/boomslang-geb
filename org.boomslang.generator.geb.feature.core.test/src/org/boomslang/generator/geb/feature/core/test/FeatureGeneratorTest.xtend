@@ -40,6 +40,10 @@ class FeatureGeneratorTest extends AbstractXtextTests{
     def testNoParam() {
 		executeTest('NoParam')
     }
+    @Test
+    def testTiles() {
+		executeTest('Tiles')
+    }
        /**
      * Method that does the actual test
      */

@@ -6,12 +6,16 @@ package org.boomslang.generator.geb.feature.core
 import com.google.inject.Inject
 import java.util.List
 import org.boomslang.dsl.feature.feature.BAssertionComponentActionParameter
+import org.boomslang.dsl.feature.feature.BClickAction
 import org.boomslang.dsl.feature.feature.BCodeStatement
+import org.boomslang.dsl.feature.feature.BCommandComponent
 import org.boomslang.dsl.feature.feature.BCommandComponentActionParameter
 import org.boomslang.dsl.feature.feature.BFeature
 import org.boomslang.dsl.feature.feature.BFeaturePackage
 import org.boomslang.dsl.feature.feature.BScenario
+import org.boomslang.dsl.feature.feature.BSelectAction
 import org.boomslang.dsl.feature.feature.BToScreenSwitch
+import org.boomslang.dsl.feature.feature.BTypeAction
 import org.boomslang.dsl.feature.services.WidgetTypeRefUtil
 import org.boomslang.generator.interfaces.IBoomAggregateGenerator
 import org.boomslang.generator.util.CodeSectionStatemachine
@@ -24,11 +28,6 @@ import static org.boomslang.generator.geb.feature.ui.GebOutputConfigurationProvi
 
 import static extension org.apache.commons.lang.StringEscapeUtils.*
 import static extension org.eclipse.xtext.EcoreUtil2.*
-import org.boomslang.dsl.feature.feature.BCommandComponent
-import org.boomslang.dsl.feature.feature.BCommandAction
-import org.boomslang.dsl.feature.feature.BTypeAction
-import org.boomslang.dsl.feature.feature.BSelectAction
-import com.wireframesketcher.model.Widget
 
 /**
  * Generates code from your model files on save.
@@ -101,8 +100,8 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		def "«it.name./** TODO ValueConverter */ replaceAll('^"','').replaceAll('"$','').escapeJava»"() {
 		
 			«it.codeStatements.compileCodeStatements(false, codeSectionStatemachine)»
-			«FOR codeStatement:sortedCodeStatements BEFORE "where:\n" SEPARATOR " | " »$«codeStatement.widget.widget.name.toFirstLower»«ENDFOR»
-			«FOR codeStatement:sortedCodeStatements SEPARATOR " | "»«bCommandGenerator.compileActionParameter(codeStatement.action)»«ENDFOR»
+			«FOR codeStatement:sortedCodeStatements BEFORE "where:\n" SEPARATOR " | "»«bCommandGenerator.compileActionPlaceholder(codeStatement.action)»«ENDFOR»«IF sortedCodeStatements.size==1»|_«ENDIF»
+			«FOR codeStatement:sortedCodeStatements SEPARATOR " | "»«bCommandGenerator.compileActionParameter(codeStatement.action)»«ENDFOR»«IF sortedCodeStatements.size==1»|_«ENDIF»
 		}
 		
 	'''}
@@ -179,7 +178,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 	}
 	
 	def private getSortedCodeStatements(BScenario it){
-		it.codeStatements.filter(BCommandComponent).filter[it.action instanceof BTypeAction || it.action instanceof BSelectAction].sortBy[it.widgetBeforeOffset.name]
+		it.codeStatements.filter(BCommandComponent).filter[it.action instanceof BTypeAction || it.action instanceof BSelectAction || (it.action instanceof BClickAction && ((it.action as BClickAction).BTileParameter!=null) )].sortBy[it.widgetBeforeOffset.name]
 	}
 	
     override doGenerate(ResourceSet input, IFileSystemAccess fsa) {

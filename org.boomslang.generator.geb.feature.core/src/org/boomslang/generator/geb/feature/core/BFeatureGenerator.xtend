@@ -101,8 +101,7 @@ class BFeatureGenerator implements IBoomAggregateGenerator {
 		def "«it.name./** TODO ValueConverter */ replaceAll('^"','').replaceAll('"$','').escapeJava»"() {
 		
 			«it.codeStatements.compileCodeStatements(false, codeSectionStatemachine)»
-			where:
-			«FOR codeStatement:sortedCodeStatements SEPARATOR " | "»$«codeStatement.widget.widget.name.toFirstLower»«ENDFOR»
+			«FOR codeStatement:sortedCodeStatements BEFORE "where:\n" SEPARATOR " | " »$«codeStatement.widget.widget.name.toFirstLower»«ENDFOR»
 			«FOR codeStatement:sortedCodeStatements SEPARATOR " | "»«bCommandGenerator.compileActionParameter(codeStatement.action)»«ENDFOR»
 		}
 		

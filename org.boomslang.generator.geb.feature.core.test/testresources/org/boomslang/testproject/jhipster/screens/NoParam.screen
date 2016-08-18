@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" name="org.boomslang.testproject.jhipster.screens.NoParam" theme="clean">
+  <widgets xsi:type="model:Button" id="5" x="243" y="296" width="91" text="Submit" measuredWidth="91" measuredHeight="25" name="Submit">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="6" x="360" y="296" text="OK" measuredWidth="36" measuredHeight="25" name="Ok">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

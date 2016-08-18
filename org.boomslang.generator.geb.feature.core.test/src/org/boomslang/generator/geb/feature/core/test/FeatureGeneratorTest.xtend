@@ -32,8 +32,13 @@ class FeatureGeneratorTest extends AbstractXtextTests{
 	
 	
 	@Test
-    def textInputAndButton() {
+    def testInputAndButton() {
 		executeTest('Login')
+    }
+    
+    @Test
+    def testNoParam() {
+		executeTest('NoParam')
     }
        /**
      * Method that does the actual test

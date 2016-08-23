@@ -2,8 +2,7 @@
 <feature
       id="org.boomslang.generator.geb.feature"
       label="Boomslang Geb Test Generator"
-      version="0.1.0.qualifier"
-      provider-name="">
+      version="0.1.0.qualifier">
 
    <description>
       Geb generator. Converts boomslang specifications into Geb code
@@ -55,7 +54,6 @@
       <import plugin="org.eclipse.jface"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="com.google.inject"/>
-      <import plugin="org.xpect.ui" version="0.1.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin

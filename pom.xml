@@ -25,7 +25,8 @@
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 	</properties>
-		<repositories>
+
+	<repositories>
 		<repository>
 			<id>boomslang-core</id>
 			<url>http://dl.bintray.com/jose-badeau/boomslang-core/</url>
@@ -172,10 +173,10 @@
 					<configuration>
 						<target>
 							<artifact>
-								 <groupId>${project.groupId}</groupId>
-                            <artifactId>geb</artifactId>
-                            <version>${project.version}</version>
-	  						</artifact>
+								<groupId>${project.groupId}</groupId>
+								<artifactId>geb</artifactId>
+								<version>${project.version}</version>
+							</artifact>
 						</target>
 						<resolver>p2</resolver>
 						<environments>
@@ -219,13 +220,13 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-maven-plugin</artifactId>
-                <extensions>true</extensions>
-            </plugin>
-        </plugins>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencyManagement>

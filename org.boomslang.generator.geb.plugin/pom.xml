@@ -11,9 +11,9 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-	<artifactId>org.boomslang.geb</artifactId>
+	<artifactId>org.boomslang.generator.geb.plugin</artifactId>
 	<packaging>jar</packaging>
-	<name>Boomslang Geb</name>
+	<name>Boomslang Generator Geb Plugin</name>
 	<description>The Boomslang Geb plugin module.</description>
 
 	<build>
@@ -63,6 +63,7 @@
 										</versionRange>
 										<goals>
 											<goal>compile</goal>
+											<goal>testCompile</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>

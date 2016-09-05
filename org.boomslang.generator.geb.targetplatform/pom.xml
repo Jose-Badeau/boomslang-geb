@@ -9,7 +9,7 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>geb</artifactId>
+  <artifactId>org.boomslang.generator.geb.targetplatform</artifactId>
   <packaging>eclipse-target-definition</packaging>
   <name>Boomslang Geb Generator Target Platform</name>
   <description>Target Platform for Generator of Geb Framework</description>

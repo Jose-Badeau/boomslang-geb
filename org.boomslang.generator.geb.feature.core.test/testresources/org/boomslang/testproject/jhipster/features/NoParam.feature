@@ -10,6 +10,6 @@ I want to "Login to the JHipster sample application"
 In order to "See my account"
 
 Scenario "NoParam"
-	Given I am on the NoParam screen 
+	Given I am on the screen NoParam 
 	when I from the Ok button I click
 	and I from the Submit button I click

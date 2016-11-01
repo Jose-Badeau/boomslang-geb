@@ -13,6 +13,6 @@ In order to "afd"
 
 Scenario "Do something with tiles"
 
-Given I am on the Tiles screen 
+Given I am on the screen Tiles 
 
 when I from the OfferingTile widgetgroup I click where property text equals "Manage advanced"

@@ -8,6 +8,7 @@ xtend-gen/
 target/
 generated/
 .settings/
+bin/
 
 # Package Files #
 *.jar

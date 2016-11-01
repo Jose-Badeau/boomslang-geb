@@ -3,17 +3,17 @@
  */
 package org.boomslang.generator.geb.mapping.core.test
 
+import com.google.inject.Guice
+import com.google.inject.Injector
 import org.boomslang.dsl.feature.FeatureStandaloneSetup
+import org.boomslang.wireframesketcher.model.xtext.BoomslangWFSModelResourceFactory
+import org.boomslang.wireframesketcher.model.xtext.ScreenEmfSupport
+import org.boomslang.wireframesketcher.model.xtext.ScreenStandaloneSetupGenerated
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.junit4.GlobalRegistries
 import org.eclipse.xtext.junit4.GlobalRegistries.GlobalStateMemento
 import org.eclipse.xtext.junit4.IInjectorProvider
 import org.eclipse.xtext.junit4.IRegistryConfigurator
-import com.google.inject.Guice
-import com.google.inject.Injector
-import com.wireframesketcher.model.xtext.BoomslangWFSModelResourceFactory
-import com.wireframesketcher.model.xtext.ScreenEmfSupport
-import com.wireframesketcher.model.xtext.ScreenStandaloneSetupGenerated
 
 class MappingInjectorProvider implements IInjectorProvider, IRegistryConfigurator {
 	protected GlobalStateMemento stateBeforeInjectorCreation

@@ -25,7 +25,7 @@
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 		<maven.repo.id>bintray-repo-maven</maven.repo.id>
-		<maven.repo>https://api.bintray.com/maven/jose-badeau/boomslang-maven-repo/boomslang-core/;publish=1</maven.repo>		
+		<maven.repo>https://api.bintray.com/maven/jose-badeau/boomslang-maven-repo/boomslang-geb/;publish=1</maven.repo>		
 	</properties>
 
 	<distributionManagement>

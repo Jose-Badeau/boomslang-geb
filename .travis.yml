@@ -5,7 +5,7 @@ script:
 after_success: 
    - java -jar DirectoryCleaner.jar $BT_USER $BT_APIKEY jose-badeau boomslang-geb updates
    - bash -e ./deleteExistingP2Content.sh
-   - bash -e ./build.sh $BT_USER $BT_APIKEY jose-badeau boomslang-geb updates 0.1.0 org.boomslang.generator.geb.repository/target/repository
+   - bash -e ./build.sh $BT_USER $BT_APIKEY jose-badeau boomslang-geb updates 1.0.1 org.boomslang.generator.geb.repository/target/repository
 env:
   global:
   - secure: OLiOnD1tkRpAPdpfI8q//sg8AupSCZ4Z88IwW77HnlRbGpTUlVeGqiMLWCydI2e3lthKuRqs0SSLxTHOVUiIroUKyWyl+LJNXBsjoFye8jFaBqd2rtijmvM9ACFf4st3OcITieqDdlLQstkUiMBvbC9FsnB0THjkJT9P0L2HgBsRv/G3DHlHyZACdk7Dsuk5l0EAtbPMqQPwGLihqsGAKTIH8GQ4SC9zfUhJVHEbJg6hJ1Vq/Y++PHluB5KS9gakN+2c3S8cNyuu7c/Xg9hZYhF4ojbWeVsMTr7x0+CFkJ3MXKrKvPAxL+kds6yLyxBCrBd/3D3hsmspxkSLwiIk5c7mFYlnDWUpVbrwxKKTe8qvUg+WlYoVVSuLuXR9Fwoo4bRBJBqduYkNMuSQrOXdMRX1Wbo7hGe5xSMtqu/ZOH1qJrBbIrCukHqUQE2V4MIax/ThAxRNFPFiQlPnWT7IbjIGeMqHTh80k79gAhV8Ak6LtA3tfgranLqomUfvQmCP5jWN2Xc0nuAUh6n7qUZpMYxRHv8+PImGHAfkZYv2UO37wGehCroSdv2CcLJ+vs9a7/GsRkhY/QIEl6Wo9aLKnneeAHj7CAnoa2gdQ2jJv7nksuKxNR/X1a9sY+AxhrHQ6xkdqW/07okv8lwjGrasfgCn75GE7/pWZpiUyAsYljs=

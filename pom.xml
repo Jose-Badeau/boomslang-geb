@@ -24,7 +24,16 @@
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
+		<maven.repo.id>bintray-repo-maven</maven.repo.id>
+		<maven.repo>https://api.bintray.com/maven/jose-badeau/boomslang-maven-repo/boomslang-core/;publish=1</maven.repo>		
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>${maven.repo.id}</id>
+			<url>${maven.repo}</url>
+		</repository>
+	</distributionManagement>
 
 	<repositories>
 		<repository>

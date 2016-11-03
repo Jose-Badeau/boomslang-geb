@@ -8,7 +8,7 @@
     <relativePath>../pom.xml</relativePath>
         <groupId>org.boomslang.generator.geb</groupId>
         <artifactId>org.boomslang.generator.geb</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 
 	<artifactId>org.boomslang.generator.geb.mapping.core</artifactId>

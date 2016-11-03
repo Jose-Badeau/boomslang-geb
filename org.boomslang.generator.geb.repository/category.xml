@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.boomslang.generator.geb.feature_1.0.1.jar" id="org.boomslang.generator.geb.feature" version="1.0.1">
+   <feature url="features/org.boomslang.generator.geb.feature_1.0.1.qualifier.jar" id="org.boomslang.generator.geb.feature" version="1.0.1.qualifier">
       <category name="org.boomslang.generator.geb"/>
    </feature>
    <category-def name="org.boomslang.generator.geb" label="Boomslang Test Generator">

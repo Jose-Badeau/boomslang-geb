@@ -6,7 +6,7 @@
 
 	<groupId>org.boomslang.generator.geb</groupId>
 	<artifactId>org.boomslang.generator.geb</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Geb Generator Project</name>
 	<description>All generator modules</description>
 	<packaging>pom</packaging>

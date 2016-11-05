@@ -25,7 +25,7 @@
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 		<birdseye.version>1.0.0-SNAPSHOT</birdseye.version>
 		<maven.repo.id>bintray-repo-maven</maven.repo.id>
-		<maven.repo>https://api.bintray.com/maven/jose-badeau/boomslang-maven-repo/boomslang-geb/;publish=1</maven.repo>		
+		<maven.repo>https://api.bintray.com/maven/jose-badeau/boomslang-maven-repo/boomslang-geb/;publish=1</maven.repo>
 	</properties>
 
 	<distributionManagement>
@@ -231,6 +231,36 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.4</version>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+					<excludePackageNames>junit.framework.*</excludePackageNames>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>

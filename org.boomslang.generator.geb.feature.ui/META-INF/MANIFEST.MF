@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.xtext.ui.shared,
  org.boomslang.dsl.feature.ui,
  org.eclipse.xtext.ui,
- org.boomslang.generator.feature.extension;bundle-version="0.1.0"
+ org.boomslang.generator.feature.extension
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: org.boomslang.generator.geb.feature.ui,
  org.boomslang.generator.geb.feature.ui.internal

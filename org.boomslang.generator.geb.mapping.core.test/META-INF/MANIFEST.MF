@@ -11,7 +11,7 @@ Require-Bundle: com.google.guava,
  org.boomslang.dsl.mapping,
  org.boomslang.generator.geb.mapping.core,
  org.eclipse.xtext.junit4,
- org.boomslang.generator.feature.extension;bundle-version="0.1.0"
+ org.boomslang.generator.feature.extension
 Import-Package: org.junit.runner;version="4.5.0",
  org.junit.runner.manipulation;version="4.5.0",
  org.junit.runner.notification;version="4.5.0",

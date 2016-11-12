@@ -64,8 +64,6 @@
       <unit id="org.boomslang.feature.feature.group" version="0.0.0"/>
       <repository location="http://dl.bintray.com/jose-badeau/boomslang-core/"/>
     </location>
-    
-    
 
   </locations>
 

@@ -51,15 +51,15 @@
       <unit id="org.polarion.eclipse.team.svn.connector.svnkit18.feature.group" version="5.0.3.I20160701-1700"/>
       <repository location="http://community.polarion.com/projects/subversive/download/eclipse/5.0/update-site/"/>
     </location>
-
-    <!-- Feature files are translated to groovy code to make specification executable. Spock is used to execute the generated tests. -->
-    <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-      <unit id="org.codehaus.groovy24.feature.feature.group" version="2.9.2.xx-201509250011-e44"/>
-      <unit id="org.codehaus.groovy.jdt.patch.feature.group" version="2.9.2.xx-201509250011-e44"/>
-      <unit id="org.codehaus.groovy.eclipse.feature.feature.group" version="2.9.2.xx-201509250011-e44"/>
-      <unit id="org.codehaus.groovy.m2eclipse.feature.feature.group" version="2.9.2.xx-201509250011-e44"/>
-      <repository location="http://dist.springsource.org/snapshot/GRECLIPSE/e4.4"/>
+    
+	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+		<unit id="org.codehaus.groovy.m2eclipse.feature.feature.group" version="2.9.1.xx-201411061335-e44-RELEASE"/>
+		<unit id="org.codehaus.groovy.eclipse.feature.feature.group" version="2.9.1.xx-201411061335-e44-RELEASE"/>
+		<unit id="org.codehaus.groovy.jdt.patch.feature.group" version="2.9.1.xx-201411061335-e44-RELEASE"/>
+		<unit id="org.codehaus.groovy.alltests.feature.feature.group" version="2.9.1.xx-201411061335-e44-RELEASE"/>
+		<repository location="http://dist.springsource.org/release/GRECLIPSE/e4.4"/>
     </location>
+
     <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
       <unit id="org.boomslang.feature.feature.group" version="0.0.0"/>
       <repository location="http://dl.bintray.com/jose-badeau/boomslang-core/"/>

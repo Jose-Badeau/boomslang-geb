@@ -5,6 +5,10 @@ sudo: true
 jdk:
   - oraclejdk8
 
+cache:
+  directories:
+  - "$HOME/.m2"
+
 addons:
   apt:
     packages:
@@ -14,6 +18,10 @@ env:
   global:
   - secure: OLiOnD1tkRpAPdpfI8q//sg8AupSCZ4Z88IwW77HnlRbGpTUlVeGqiMLWCydI2e3lthKuRqs0SSLxTHOVUiIroUKyWyl+LJNXBsjoFye8jFaBqd2rtijmvM9ACFf4st3OcITieqDdlLQstkUiMBvbC9FsnB0THjkJT9P0L2HgBsRv/G3DHlHyZACdk7Dsuk5l0EAtbPMqQPwGLihqsGAKTIH8GQ4SC9zfUhJVHEbJg6hJ1Vq/Y++PHluB5KS9gakN+2c3S8cNyuu7c/Xg9hZYhF4ojbWeVsMTr7x0+CFkJ3MXKrKvPAxL+kds6yLyxBCrBd/3D3hsmspxkSLwiIk5c7mFYlnDWUpVbrwxKKTe8qvUg+WlYoVVSuLuXR9Fwoo4bRBJBqduYkNMuSQrOXdMRX1Wbo7hGe5xSMtqu/ZOH1qJrBbIrCukHqUQE2V4MIax/ThAxRNFPFiQlPnWT7IbjIGeMqHTh80k79gAhV8Ak6LtA3tfgranLqomUfvQmCP5jWN2Xc0nuAUh6n7qUZpMYxRHv8+PImGHAfkZYv2UO37wGehCroSdv2CcLJ+vs9a7/GsRkhY/QIEl6Wo9aLKnneeAHj7CAnoa2gdQ2jJv7nksuKxNR/X1a9sY+AxhrHQ6xkdqW/07okv8lwjGrasfgCn75GE7/pWZpiUyAsYljs=
   - secure: ZVRQPJyDBH99aNwWDKZd5vXzCg6JIB2WcptOJXdw56WRY6vy2ZXodggKQ0GQXmCBezAsfIzxupG6cB8/iXtx4cg2iHvHamNzTfbaPTPmNb5Up60PuZt7ECJJnH9TH6nC73cBRrS8/PTduXIHlADippf3PXWFjk5p2PzphPfDJH5IM4m5UWiL7vpZkWB622xdsmjEsvhGcUTKcvceiRso2Ti9JSL1VSRjtkcM5exCpGSkGuH0g0AuAz8chYc7ht/318x3K4UsGb2MIdm9+LKCwXJSBHXol2lYte796XbZ6ObH2qlW3qj7yFnRB4vCqetu+wmn2uBpamH6ofCqZ8wOZ2ckBTLQQXM9uk2zdWw6WSLtgkkE2Z4A9HfbpbdQVm+FZfh0Qf9uuzCqgVG/cnURcSs+I8D/pdkFy54TuAqdphjrVDkSMJUy8+jHanbkh1kzXZMESqusnbsK7Fm5auoFctvNXumJhjv8KaijBTn6b4m1hjjPzLulC9ft5wnzdOuVnTMmj2IUSJrh84+VLfGyhM4wDZHcYhveRFMadpC+bsO8Xd29uX2yrsW0IG+wCCzb/c+2jUE6+FRUk470leSeabJHf+KL+DF9bRl1jJbpcBCRtw04xLgXyeoI4dzm6Ni3vkxJsQhEcFdT+DVnwFKN7KcWCeTcFOd+IgQirSWPFzs=
+
+install:
+  - java -version
+  - ./mvnw -version
 
 script:
 - ./mvnw clean install

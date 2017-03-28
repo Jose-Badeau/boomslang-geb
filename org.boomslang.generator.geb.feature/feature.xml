@@ -2,7 +2,7 @@
 <feature
       id="org.boomslang.generator.geb.feature"
       label="Boomslang Geb Test Generator"
-      version="1.0.0.qualifier">
+      version="1.1.0.qualifier">
 
    <description>
       Geb generator. Converts boomslang specifications into Geb code

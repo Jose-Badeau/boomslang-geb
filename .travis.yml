@@ -31,7 +31,7 @@ install:
   - mvnw -version
 
 script:
-- mvnw clean install
+  - mvnw clean install
 
 #after_success: 
 #   - java -jar DirectoryCleaner.jar $BT_USER $BT_APIKEY jose-badeau boomslang-geb updates
